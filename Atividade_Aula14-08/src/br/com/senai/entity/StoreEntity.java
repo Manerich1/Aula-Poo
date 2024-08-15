@@ -6,6 +6,24 @@ public class StoreEntity {
     private double productValue;
     private int quantity;
     private double totalValue;
+    private int totalQuantityProducts;
+    private double totalValueProducts;
+
+    public int getTotalQuantityProducts() {
+        return totalQuantityProducts;
+    }
+
+    public void setTotalQuantityProducts(int totalQuantityProducts) {
+        this.totalQuantityProducts = totalQuantityProducts;
+    }
+
+    public double getTotalValueProducts() {
+        return totalValueProducts;
+    }
+
+    public void setTotalValueProducts(double totalValueProducts) {
+        this.totalValueProducts = totalValueProducts;
+    }
 
     public String getProduct() {
         return product;

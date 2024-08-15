@@ -21,7 +21,7 @@ public class StoreController {
         storeService.findItens(storeEntity);
     }
 
-    public StoreEntity editProduct(StoreEntity storeEntity) {
-        return storeService.editProduct(storeEntity);
+    public StoreEntity editProduct(String newProduct, double newProductValue, int newQuantity, double newTotalValue) {
+        return storeService.editProduct(newProduct, newProductValue, newQuantity, newTotalValue);
     }
 }
