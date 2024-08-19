@@ -30,15 +30,14 @@ public class MainClass {
 
         do {
             System.out.print("""
-                    --------MENU---------
+                    ----------MENU----------
                     1 - Cadastrar produtos
                     2 - Listar produtos
-                    3 - Buscar produtos
-                    4 - Editar um produto
-                    5 - Excluir um produto
+                    3 - Buscar produto
+                    4 - Editar produto
+                    5 - Excluir produto
                     6 - Sair
-                    Digite o valor desejado:
-                    -->""");
+                    Digite o valor desejado:\s""");
 
             int inputValue = input.nextInt();
             switch (inputValue) {
@@ -46,15 +45,15 @@ public class MainClass {
 
                     input.nextLine();
                     System.out.println();
-                    System.out.println("Cadastrastramento de produtos!!!");
+                    System.out.println("Cadastrar Produto");
 
-                    System.out.println("Digite o nome do produto a ser cadastrado");
+                    System.out.print("Digite o nome do produto a ser cadastrado: ");
                     product = input.nextLine();
 
-                    System.out.println("Digite o valor do produto!");
+                    System.out.print("Digite o valor do produto: ");
                     productValue = input.nextInt();
 
-                    System.out.println("Digite a quantidade de produtos a serem registrados");
+                    System.out.print("Digite a quantidade de produtos a serem registrados: ");
                     quantity = input.nextInt();
                     totalValue = productValue * quantity;
 
@@ -64,7 +63,7 @@ public class MainClass {
                     break;
                 case 2:
 
-                    System.out.println("Listar produtos");
+                    System.out.println("Listar Produtos");
                     storeController.showProdutcs(storage);
                     System.out.println();
 
@@ -72,7 +71,7 @@ public class MainClass {
                 case 3:
 
                     input.nextLine();
-                    System.out.println("Edição de produtos cadastrados");
+                    System.out.println("Edição de Produtos cadastrados");
 
                     System.out.print("Informe o ID do produto a ser BUSCADO pelo sistema: ");
                     int IDfind = input.nextInt();
@@ -85,20 +84,20 @@ public class MainClass {
                 case 4:
 
                     input.nextLine();
-                    System.out.println("Edição de produtos cadastrados");
+                    System.out.println("Edição de Produtos cadastrados");
 
                     System.out.print("Informe o ID do produto a ser EDITADO pelo sistema: ");
                     int IdEdit = input.nextInt();
                     if (IdEdit > storage.size() || IdEdit < 0) {System.out.println("Cadastro não localizado");}
 
                     input.nextLine();
-                    System.out.println("Digite o novo nome do produto a ser cadastrado");
+                    System.out.print("Digite o novo nome do produto a ser cadastrado: ");
                     newProduct = input.nextLine();
 
-                    System.out.println("Digite o novo valor do produto!");
+                    System.out.print("Digite o novo valor do produto: ");
                     newProductValue = input.nextInt();
 
-                    System.out.println("Digite a nova quantidade de produtos a serem registrados");
+                    System.out.print("Digite a nova quantidade de produtos a serem registrados: ");
                     newQuantity = input.nextInt();
                     newTotalValue = newProductValue * newQuantity;
 
@@ -109,7 +108,7 @@ public class MainClass {
                 case 5:
 
                     input.nextLine();
-                    System.out.println("Remover produtos do sistema");
+                    System.out.println("Remover Produto do sistema");
 
                     System.out.print("Informe o ID do produto a ser REMOVIDO do sistema: ");
                     int IdRemove = input.nextInt();

@@ -20,10 +20,9 @@ public class StoreService {
         StoreEntity storeEntity = new StoreEntity();
         storeEntity.setTotalQuantityProducts(0);
         storeEntity.setTotalValueProducts(0);
-
-        System.out.println("Produtos cadastrados no sistema:");
-        System.out.println("---------------");
         int[] index = {0};
+
+        System.out.println("---------------");
 
         storage.forEach(singleProduct -> {
             System.out.println("ID: " + index[0]);
@@ -50,7 +49,6 @@ public class StoreService {
         System.out.println("Valor: R$ " + storeEntity.getProductValue());
         System.out.println("Quantidade: " + storeEntity.getQuantity());
         System.out.println("Valor total em estoque: R$ " + storeEntity.getTotalValue());
-        System.out.println("---------------");
     }
 
     public StoreEntity editProduct(String newProduct, double newProductValue, int newQuantity, double newTotalValue) {
